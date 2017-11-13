@@ -95,7 +95,12 @@ pslgame.config(function($routeProvider) {
 	.when('/dashboard', {
 			templateUrl : 'partials/dashboard.html',
 			controller : 'dashboardController'
-	})	
+	}) 
+	// Send Coins Page
+	.when('/sendCoins', {
+			templateUrl : 'partials/sendCoins.html',
+			controller : 'sendCoinsController'
+ 	})
 	// Transaction Page
 	.when('/transaction', {
 			templateUrl : 'partials/transaction.html',
