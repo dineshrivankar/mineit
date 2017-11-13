@@ -13,20 +13,20 @@ pslgame.controller('dashboardController', function($scope , $http) {
 					 {name:"4",description:"Block 4 Description"},
 					 {name:"5",description:"Block 5 Description"}
 					];
-    $scope.latestUpdates = [{
-								fromUser : "Shane Watson",
-								toUser : "Mary Cooper",
-								noOfCoins :  10,
-								timeDate : "10 Nov 2016, 11:30am"
-							},{
-								fromUser : "Donald Trump",
-								toUser : "Harry Crane",
-								noOfCoins :  100,
-								timeDate : "17 Dec 2016, 1:50am"
-							}];
+
+	$scope.userName = "Shawn Mendes";
 	
-    $scope.userName = "Shawn Mendes";
-    
+	// GET LATEST TRANSACTION
+	
+	var url = apiUrl + "/deals/latest"
+
+    $http.get(url).success(function (response) {
+        console.log("FirstTime GetAllTransactions success response", response);
+        // TODO - Bind response to UI
+        $scope.transactions = [response];
+    }).catch(function (response) {
+        console.log("FirstTime GetAllTransactions failed response!", response);
+    });
 	
 	// GET ALL NETWORK BLOCKS
     var url = apiUrl + "/puzzles/blocks"
