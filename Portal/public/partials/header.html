@@ -1,10 +1,15 @@
 <nav class="navbar navbar-default navbar-fixed-top" style="min-height: 56px;height: 56px; background-color: #3A3F51; color: white" >
     <div class="container-fluid" style="height: 56px;">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <!--div class="navbar-header" style="padding: 10px">
-                <img ng-src="assets/img/logo-for-dashboard.png">
-            MINEIT
-        </div-->
     </div>
-
 </nav>
+<div id="dashboard">
+	<div class="container-fluid container1 bg-1 text-center"><!--container0-->
+		<!--<div class="profile-picture-icon"></div>-->
+		<div><h4>Hi...{{userName}}!</h4></div>       
+		<div class="total-psl-coins">(
+			<span class="icon-coin"><i class="glyphicon glyphicon-bitcoin"></i></span>
+			<span>PSL Coins</span>
+			<var>{{pslCoins}}</var>)
+		</div>
+	</div>
+</div>
