@@ -3,21 +3,14 @@ var pslgame = angular.module('pslgame');
 
 pslgame.controller('indexController', function($scope , $http) {
 
-$('#main-menu').metisMenu();
-	$scope.pageTitle = "Dashboard";
-	//toastr["success"]("Success Details.");
-	//toastr["error"]("Error in retrieving Details.");
-	
+$scope.login = function (){
+	alert("Login");	
+}
 
-	
-	
-// Simple GET request example :
-$http.get('#/listEvent').
-  success(function(data, status, headers, config) {
 
-  }).
-  error(function(data, status, headers, config) {
-  });
+$scope.generateUserName = function (){
+	alert("generateUserName");	
+}
 });
 
 
