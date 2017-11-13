@@ -1,8 +1,12 @@
 
 var pslgame = angular.module('pslgame');
 
-pslgame.controller('indexController', ['$scope', '$rootScope', '$http', function ($scope, $rootScope, $http) {
+pslgame.controller('indexController', ['$scope', '$rootScope', '$http', '$location','$cookieStore', function ($scope, $rootScope, $http, $location, $cookieStore) {
 
+
+	$rootScope.globals = {};
+    $cookieStore.remove('globals');
+	
 	$scope.login = function () {
 
 		$rootScope.username = $scope.username
@@ -13,7 +17,14 @@ pslgame.controller('indexController', ['$scope', '$rootScope', '$http', function
 
 		$http.post(url, data).success(function (response) {
 			console.log("Login success response", response);
-			// TODO - Redirect to dashboard
+			$rootScope.globals = {
+                            currentUser: {
+                                username: $rootScope.username,
+                                pslCoins: 10000
+                            }
+                        };
+            $cookieStore.put('globals', $rootScope.globals);
+			$location.path('/dashboard');
 		}).catch(function (response) {
 			console.log("Login failed response!", response);
 			// TODO - Show error on login
@@ -31,5 +42,6 @@ pslgame.controller('indexController', ['$scope', '$rootScope', '$http', function
 			console.log("generateUserName failed response!", response);
 		})
 	}
-
+	
+	
 }]);
