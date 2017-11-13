@@ -8,6 +8,7 @@ pslgame.controller('transactionController', function($scope , $http) {
     $http.get(url).success(function (response) {
         console.log("GetAllTransactions success response", response);
         // TODO - Bind response to UI
+        $scope.transactions = response;
     }).catch(function (response) {
         console.log("GetAllTransactions failed response!", response);
     })
