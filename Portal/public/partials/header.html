@@ -2,14 +2,14 @@
     <div class="container-fluid" style="height: 56px;">
     </div>
 </nav>
-<div id="dashboard">
+<div id="dashboard" ng-if="(globals.currentUser)" >
 	<div class="container-fluid container1 bg-1 text-center"><!--container0-->
 		<!--<div class="profile-picture-icon"></div>-->
-		<div><h4>Hi...{{userName}}!</h4></div>       
+		<div><h4>Hi... {{globals.currentUser.username}}!</h4></div>       
 		<div class="total-psl-coins">(
 			<span class="icon-coin"><i class="glyphicon glyphicon-bitcoin"></i></span>
 			<span>PSL Coins</span>
-			<var>{{pslCoins}}</var>)
+			<var>{{globals.currentUser.pslCoins}}</var>)
 		</div>
 	</div>
 </div>

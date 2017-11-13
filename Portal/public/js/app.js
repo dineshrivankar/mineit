@@ -16,12 +16,12 @@ var pslgame = angular.module('pslgame', ['ngRoute','ui.bootstrap','ngCookies','A
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
             // redirect to login page if not logged in
             if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
-                //$location.path('/login');
+                $location.path('/login');
 			} 
         });
 		
 		/*var modalInstance = $modal.open({
-						templateUrl: 'puzzle.html',
+						templateUrl: 'partials/puzzle.html',
 						controller: 'puzzleController',
 						scope: $rootScope,		
 					});	
@@ -62,7 +62,7 @@ var pslgame = angular.module('pslgame', ['ngRoute','ui.bootstrap','ngCookies','A
 					$rootScope.question = data.question;
 					$rootScope.questionID = data._id;
 					var modalInstance = $modal.open({
-						templateUrl: 'puzzle.html',
+						templateUrl: 'partials/puzzle.html',
 						controller: 'puzzleController',
 						scope: $rootScope,		
 					});	
