@@ -85,12 +85,10 @@ pslgame.config(function($routeProvider) {
 		    templateUrl: 'partials/login.html',
 			controller: 'indexController',
         })
-
 	// Logout Page
 	.when('/logout', {
 			redirectTo : '/login'
         })
-
 	// Dashboard Page
 	.when('/dashboard', {
 			templateUrl : 'partials/dashboard.html',
