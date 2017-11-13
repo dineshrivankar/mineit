@@ -20,12 +20,12 @@ var pslgame = angular.module('pslgame', ['ngRoute','ui.bootstrap','ngCookies','A
 			} 
         });
 		
-		/*var modalInstance = $modal.open({
-						templateUrl: 'puzzle.html',
+		var modalInstance = $modal.open({
+						templateUrl: 'partials/puzzle.html',
 						controller: 'puzzleController',
 						scope: $rootScope,		
 					});	
-		*/
+		
 		//Puzzle Time 
 		$interval(function () {
 			socket.emit('getTime',"");	
@@ -62,7 +62,7 @@ var pslgame = angular.module('pslgame', ['ngRoute','ui.bootstrap','ngCookies','A
 					$rootScope.question = data.question;
 					$rootScope.questionID = data._id;
 					var modalInstance = $modal.open({
-						templateUrl: 'puzzle.html',
+						templateUrl: 'partials/puzzle.html',
 						controller: 'puzzleController',
 						scope: $rootScope,		
 					});	
