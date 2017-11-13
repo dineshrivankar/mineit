@@ -5,7 +5,6 @@ pslgame.controller('dashboardController', function($scope , $http) {
 
 
     $scope.pslCoins = 100;
-    $scope.block = 2;
     $scope.userName = "User Name ";
     $scope.blocks = [
 					 {name:"1",description:"Block 1 Description"},
@@ -28,7 +27,16 @@ pslgame.controller('dashboardController', function($scope , $http) {
 	
     $scope.userName = "Shawn Mendes";
     
-
+	
+	// GET ALL NETWORK BLOCKS
+    var url = apiUrl + "/puzzles/blocks"
+    $http.get(url).success(function (response) {
+		console.log("GetAllBlocks success response", response);
+		$scope.numberOfBlocks = response.length;
+        // TODO - Bind response to UI
+    }).catch(function (response) {
+        console.log("GetAllBlocks failed response!", response);
+    })
 
 
 });

@@ -3,6 +3,14 @@ var pslgame = angular.module('pslgame');
 
 pslgame.controller('transactionController', function($scope , $http) {
 
+    // GET ALL NETWORK TRANSACTIONS
+    var url = apiUrl + "/deals"
+    $http.get(url).success(function (response) {
+        console.log("GetAllTransactions success response", response);
+        // TODO - Bind response to UI
+    }).catch(function (response) {
+        console.log("GetAllTransactions failed response!", response);
+    })
 
     $scope.pslCoins = 100;
     
