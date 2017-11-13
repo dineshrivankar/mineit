@@ -32,19 +32,19 @@
   
 <div class="container-fluid bg-2 col-md-6 col-md-offset-3" id="latest-updates" >
   <h4 class="margin">Latest Updates</h4>
-    <div class="" ng-repeat="update in latestUpdates| filter:searchText">
+    <div class="" ng-repeat="transaction in transactions| filter:searchText">
         <div class="well well-sm">
           <div class="row" id="one-update">
-              <span class="col-md-4 col-xs-4 text-muted" id="fromUser"><label class="text-muted">{{update.fromUser}}</label></span>
+              <span class="col-md-4 col-xs-4 text-muted" id="fromUser"><label class="text-muted">{{transaction.fromUser}}</label></span>
               <span class="col-md-4 col-xs-4">
-                  <span class="row no-padding-margin text-muted">{{update.noOfCoins}} Coins</span>
+                  <span class="row no-padding-margin text-muted">{{transaction.amount}} Coins</span>
                   <span class="row no-padding-margin">             
                       <span class="arrow-line"></span>
                       <div class="arrow-triangle"></div>
                   </span>
-                    <span class="row no-padding-margin text-muted">{{update.timeDate}}</span>
+                    <span class="row no-padding-margin text-muted">{{transaction.created_at | date: 'dd:MM:yyyy hh:mm:ss a' }}</span>
               </span>
-              <span class="col-md-4 col-xs-4" id="toUser"> <label class="text-muted">{{update.toUser}}</label></span>
+              <span class="col-md-4 col-xs-4" id="toUser"> <label class="text-muted">{{transaction.toUser}}</label></span>
           </div>
         </div>
     </div>
