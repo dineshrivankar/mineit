@@ -20,12 +20,12 @@ var pslgame = angular.module('pslgame', ['ngRoute','ui.bootstrap','ngCookies','A
 			} 
         });
 		
-		/*var modalInstance = $modal.open({
+		var modalInstance = $modal.open({
 						templateUrl: 'partials/puzzle.html',
 						controller: 'puzzleController',
 						scope: $rootScope,		
 					});	
-		*/
+		
 		//Puzzle Time 
 		$interval(function () {
 			socket.emit('getTime',"");	

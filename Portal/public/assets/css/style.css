@@ -138,14 +138,23 @@ background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
         padding-top: 10px;
         font-size: 11px;
     }
-	
+/*  header */	
+     .header-navbar .navbar-collapse, .navbar-default .navbar-form{
+        background-color: #3a3f51;   
+        width: 50%;
+        color: whitesmoke;
+        float: right;
+    }
+    .header-navbar .navbar-nav > li > a{
+        color: whitesmoke;
+    }
 /*  Login Page */
-    #loginPage{
-       /*background-image: url("../../assets/img/snow-mountain.jpg");
+/*    #loginPage{
+       background-image: url("./../img/snow-mountain.jpg");
        background-repeat: no-repeat;
-	   background-blend-mode: color-burn;*/
+	   background-blend-mode: color-burn;
 		
-	}
+	}*/
 	.loginContaner{
 		margin-top:250px;		
 	}
@@ -347,7 +356,12 @@ background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
         display: flex;
         align-items: center;
         justify-content: center;
+    }    
+    #dashboard #carousel-example{
+        margin-top: -56px;
+        margin-bottom: 10px;
     }
+    
 	
 /* Transaction Page */
     #all-latest-updates .arrow-triangle{
@@ -412,5 +426,32 @@ background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
     #send-coins #select-user-panel .panel-footer button{
         width: 165px;
     }
-	
+	/* Puzzle Page*/    
+    #puzzle-modal .modal-question{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+    #puzzle-modal .num{
+        font-size: 20px;
+    }
+    #puzzle-modal .form-control{
+        border-bottom: transparent;
+        border-right: transparent;
+        border-left: transparent;
+        width: 55%;
+        margin: auto;
+        text-align: right;
+        font-size: 20px;
+    }
+    #puzzle-modal .arguemnents{
+        margin: auto;
+    }
+    #puzzle-modal .col-xs-6{
+        float: right;
+    }
+    #puzzle-modal input[type="text"]{
+        background-color:#dff0d8 !important
+    }
+    
 
