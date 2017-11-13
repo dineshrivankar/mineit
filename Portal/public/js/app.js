@@ -100,6 +100,10 @@ pslgame.config(function($routeProvider) {
 	.when('/transaction', {
 			templateUrl : 'partials/transaction.html',
 			controller : 'transactionController'
+	})	
+    .when('/sendCoins', {
+			templateUrl : 'partials/sendCoins.html',
+			controller : 'sendCoinsController'
 	})
 	// Default Page after login
 	.otherwise({

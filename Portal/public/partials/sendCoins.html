@@ -1,0 +1,58 @@
+<style>
+    #send-coins #select-user-panel .panel-heading{
+        background-color: #38bee7;
+        color: whitesmoke;
+    }
+    #send-coins #select-user-panel .panel-footer{
+        background-color: #44d968;
+        color: whitesmoke;
+    }
+    #send-coins #select-user-panel .panel-body #select-user{
+        margin-bottom: 15px;
+        height: 100px;
+    }
+    #send-coins #select-user-panel .panel-body #no-of-coins{
+        height: 100px;
+    }    
+    #send-coins #select-user-panel .panel-footer button{
+        width: 165px;
+    }
+</style>
+
+<div id="dashboard">
+<div class="container-fluid container1 bg-1 text-center">
+    <div><h4>Hi...{{userName}}!</h4></div>       
+    <div class="total-psl-coins">(
+        <span class="icon-coin"><i class="glyphicon glyphicon-bitcoin"></i></span>
+        <span>PSL Coins</span>
+        <var>{{pslCoins}}</var>)
+    </div>
+</div>
+</div>
+
+<div class="container-fluid bg-2 col-md-6 col-md-offset-3 " id="send-coins" >
+    <div class="row" >
+        <div class="panel panel-default" id="select-user-panel">
+            <div class="panel-heading"><h4 class="margin text-center">Select User</h4></div>
+            <div class="panel-body">
+                <div class="row-fluid text-center bg-info" id="select-user">
+                     <span class="row text-muted">User</span>
+                    <div class="col-xs-8 col-xs-offset-2">                     
+                        <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+                            <option ng-repeat="user in users" data-subtext="Rep California">{{user.name}}</option>
+                         </select>
+                    </div>
+
+                </div>                
+                <div class="row-fluid text-center bg-success" id="no-of-coins">
+                     <span class="row text-muted">Number Of Coins</span>
+                       <div class="col-xs-6 col-xs-offset-3">
+                        <input class="form-control" id="ex1" type="number">
+                      </div>
+                </div>
+            </div>
+            <div class="panel-footer"><h4 class="margin text-center ">  <button type="button" class="btn btn-success btn-md">Send Coins</button></h4></div>
+        </div>
+        
+    </div>
+</div> 
