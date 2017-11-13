@@ -19,7 +19,7 @@ pslgame.controller('sendCoinsController', function($scope , $http, $rootScope) {
 		var url = apiUrl + '/deals ';
 		data = { 
 				fromUser: $rootScope.globals.currentUser.username,
-				toUser: 'shaggy_grape',//$scope.toUser,
+				toUser: $scope.toUser,
 				amount: $scope.amount
 				};
 		$http.post(url, data).success(function (response) {
