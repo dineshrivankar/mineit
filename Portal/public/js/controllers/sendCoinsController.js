@@ -1,3 +1,4 @@
+
 var pslgame = angular.module('pslgame');
 
 pslgame.controller('sendCoinsController', function($scope , $http, $rootScope) {
