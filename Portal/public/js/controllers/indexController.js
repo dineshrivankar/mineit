@@ -20,7 +20,7 @@ pslgame.controller('indexController', ['$scope', '$rootScope', '$http', '$locati
 			$rootScope.globals = {
                             currentUser: {
                                 username: $rootScope.username,
-                                pslCoins: 10000
+                                pslCoins: 1000
                             }
                         };
             $cookieStore.put('globals', $rootScope.globals);

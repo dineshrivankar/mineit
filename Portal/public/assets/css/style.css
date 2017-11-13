@@ -394,6 +394,23 @@ background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
         align-items: center;
         justify-content: center;
     }
-	
+	    #send-coins #select-user-panel .panel-heading{
+        background-color: #38bee7;
+        color: whitesmoke;
+    }
+    #send-coins #select-user-panel .panel-footer{
+        background-color: #44d968;
+        color: whitesmoke;
+    }
+    #send-coins #select-user-panel .panel-body #select-user{
+        margin-bottom: 15px;
+        height: 100px;
+    }
+    #send-coins #select-user-panel .panel-body #no-of-coins{
+        height: 100px;
+    }    
+    #send-coins #select-user-panel .panel-footer button{
+        width: 165px;
+    }
 	
 
