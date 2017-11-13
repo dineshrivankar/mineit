@@ -9,11 +9,12 @@ var server = connect(
 ).listen(port);
 
 // Game sockets
-/*var io = socketio.listen(server);
+var io = socketio.listen(server);
 io.sockets.on('connection', function(socket) {
 	
 	socket.emit('getTime');
 	socket.on('getTime', function(obj) {
+		console.log(new Date().getSeconds());
 		socket.emit('getTime', new Date().getSeconds());
 	});
-});*/
+});
