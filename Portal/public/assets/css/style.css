@@ -148,7 +148,22 @@ background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
     .header-navbar .navbar-nav > li > a{
         color: whitesmoke;
     }
-/*  Login Page */
+    .header-navbar .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+        color: #52c6ea;
+    }
+    .header-navbar .navbar-collapse, .navbar-default .navbar-form{
+        border-color: transparent;
+        margin-right: -30px;
+    }
+    .header-navbar .navbar-toggle{
+        margin-right: 0px;
+    }
+    .header-navbar .back-btn{   
+        margin-top: 18px;
+        font-size: 18px;
+        color: whitesmoke;      
+    }
+    /*  Login Page */
 /*    #loginPage{
        background-image: url("./../img/snow-mountain.jpg");
        background-repeat: no-repeat;
@@ -408,7 +423,7 @@ background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
         align-items: center;
         justify-content: center;
     }
-	    #send-coins #select-user-panel .panel-heading{
+    #send-coins #select-user-panel .panel-heading{
         background-color: #38bee7;
         color: whitesmoke;
     }
