@@ -8,10 +8,9 @@ var server = connect(
 	connect.static(__dirname + '/public')
 ).listen(port);
 
-// Game sockets
+// Puzzle Sockets
 var io = socketio.listen(server);
-io.sockets.on('connection', function(socket) {
-	
+io.sockets.on('connection', function(socket) {	
 	socket.emit('getTime');
 	socket.on('getTime', function(obj) {
 		console.log(new Date().getSeconds());

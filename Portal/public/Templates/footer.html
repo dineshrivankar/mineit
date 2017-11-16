@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <footer class="footer">
+        <!--<p>Terms &amp; conditions Disclaimer Privacy Policy. ©<span id="copyright" ng-bind="thisYear" class="">2017</span> Persistent Systems Ltd.</p>-->
+        <div class="bottom-nav">
+            <div class="nav-icon home-nav" ng-class="selectedTab == 'dashboard' ? 'selected' : ''" ng-click="gotoDashBoard()">
+                <div>
+                    <img class="actionlink home" src="/assets/img/light/Home.png" alt="Home" />
+                </div>
+                <div><span>Home</span></div>
+            </div>
+            <div class="nav-icon transactions-nav" ng-class="selectedTab == 'transaction' ? 'selected' : ''" ng-click="gotoAllTransactions()">
+                <div>
+                    <img class="actionlink transactions" src="/assets/img/light/Transactions.png" alt="Transactions" />
+                </div>
+                <div><span>Transactions</span></div>
+            </div>
+            <div class="nav-icon blocks-nav" ng-class="selectedTab == 'block' ? 'selected' : ''" ng-click="gotoBlocks()">
+                <div>
+                    <img class="actionlink blocks" src="/assets/img/light/Blocks.png" alt="Blocks" />
+                </div>
+                <div><span>Blocks</span></div>
+            </div>
+            <div class="nav-icon transfer-nav" ng-class="selectedTab == 'sendCoin' ? 'selected' : ''" ng-click="gotoSendCoin()">
+                <div>
+                    <img class="actionlink transfer" src="/assets/img/light/Transfer.png" alt="Transfer" />
+                </div>
+                <div><span>Transfer</span></div>
+                <!--dummy comment-->
+            </div>
+        </div>
+    </footer>
+</div>

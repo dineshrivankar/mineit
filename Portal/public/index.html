@@ -1,44 +1,72 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="pslgame">
+ <!doctype html>
+    <!-- Meta-Information -->
+    <title>MineIt!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="cache-control" content="public"> 
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mine IT</title>
-    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
-    <link href="/assets/css/style.css" rel="stylesheet" />
-    <script src="/assets/js/angular.js"></script>
-    <script src="/assets/js/angular-route.js"></script>
-    <script src="/assets/js/angular-animate.js"></script>
-    <script src="/assets/js/angular-cookies.js"></script>
-    <script src="/assets/js/angular-busy.min.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/js/controllers/indexController.js"></script>
-    <script src="/js/controllers/dashboardController.js"></script>
-    <script src="/js/controllers/transactionController.js"></script>
-    <script src="/js/controllers/puzzleController.js"></script>
-	<script src="/js/controllers/sendCoinsController.js"></script>
-    <script src="/js/directives/ui-bootstrap-tpls-0.11.2.js"></script>
-    <script src="/js/directives/app-directives.js"></script>
+     <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
 
-</head>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/libs/bootstrap-3.3.5-dist/ie10-viewport-bug-workaround.css" rel="stylesheet" />
 
-<body id="InvestorDay">
-    <div ng-include src="'partials/header.html'"></div>
-    <div class="page-main" ng-view> </div>
-    <div ng-include src="'partials/footer.html'"></div>
+    <!-- Custom styles for this template -->    
+    <link href="assets/css/main-style.css" rel="stylesheet" /> 
 
-    <script src="/assets/js/jquery-1.11.1.js"></script>
-    <script src="/assets/js/toastr.js"></script>
-    <script src="/assets/js/bootstrap.js"></script>
-    <script src="/assets/js/jquery.metisMenu.js"></script>
-    <script src="/assets/js/custom.js"></script>
-    <script src="/assets/js/loading-bar.js"></script>
-	 <script src="/socket.io/socket.io.js"></script>	
-    <script> 
-        const apiUrl = "http://10.244.51.108:7071" 
-    </script>
+    <script type="text/javascript"> 
+        if (top != self)top.location.replace(self.location.href);
+    </script> 
+    <body>
+    <!-- Bootstrap core JavaScript
+        ================================================== --> 
 
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/libs/bootstrap-3.3.5-dist/jquery-3.1.0.min.js"></script>
+    <script src="assets/libs/bootstrap-3.3.5-dist/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="assets/libs/bootstrap-3.3.5-dist/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="assets/libs/bootstrap-3.3.5-dist/bootstrap-confirmation.js" ></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/libs/bootstrap-3.3.5-dist/ie10-viewport-bug-workaround.js"></script>
+
+    <script type="text/javascript" src="assets/libs/angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angularjs/angular-route.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angularjs/angular-animate.js"></script> 
+    <script type="text/javascript" src="assets/libs/angularjs/ngStorage.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angularjs/ngDialog.min.js"></script>        
+    <script type="text/javascript" src="assets/libs/angularjs/ngSanitize-1.4.8.js"></script>  
+    <script src="assets/libs/angularjs/angular-animate.min.js" ></script>
+     <script type="text/javascript" src="assets/libs/moment.min.js"></script>
+     <script type="text/javascript" src="assets/libs/sweetalert.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angularjs/angular-moment.min.js"></script>
+    <script src="assets/libs/ui-bootstrap/ui-bootstrap-custom-2.5.0.min.js" ></script> 
+    <script src="assets/libs/ui-bootstrap/ui-bootstrap-custom-tpls-2.5.0.min.js" ></script> 
+    <script src="assets/libs/ui-bootstrap/ui-bootstrap-tpls-0.11.2.js" ></script> 
+   
+        
+  
+    <script src="assets/libs/dirPagination.js"></script> 
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>	
+    <script type="text/javascript" src="common/app.js"></script> 
+    <script type="text/javascript" src="common/appRoute.js"></script> 
+    <script type="text/javascript" src="service/baseSvc.js"></script>
+    <script type="text/javascript" src="service/investorsService.js"></script>
+    <script type="text/javascript" src="controller/investorsCtrl.js"></script> 
+    <script type="text/javascript" src="controller/puzzleController.js"></script> 
+
+
+
+    <div data-ng-app="investorApp" ng-controller="investorsCtrl"> 
+        <div ng-show="isHeaderShow" class="app-header" ng-include='"Templates/header.html"'></div>
+        <!--div class="app-footer" ng-include='"Templates/puzzle.html"'></div-->
+        <div class="people-app" ng-view></div>
+        <div ng-show="isFooterShow" class="app-footer" ng-include='"Templates/footer.html"'></div>
+    </div>
 </body>
-
 </html>
+ 

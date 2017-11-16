@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="update-head-wrap">
+                <h3>Block transaction</h3>
+            </div> 
+            <div class="transfer-coin-row" pagination-id="blockPagination" 
+                          dir-paginate="blockDtl in blockDetails | itemsPerPage: maxVisibleConnectionCount"
+                   ng-click="blockDtl.numberOfDeals == 0 || gotoTransactionId(blockDtl.bid)">
+                <div class="number-wrap" >
+                    <h3>{{ blockDtl.bid }}</h3>
+                </div>
+                <div class="block-stats-wrap">
+                    <h3 class="mined-by">
+                        <span class="blk-img-wrap">
+                            <img src="/assets/img/grey/UserProfile.png" /> 
+                        </span>
+                        {{ blockDtl.userName }} </h3>
+                    <p class="blk-id-reward">
+                        <span class=""> PID: {{ blockDtl.pid }} </span><br>
+                        <span class=""> Transactions: {{ blockDtl.numberOfDeals }} </span><br>
+						<span class=""> Reward: 25 Coins </span>
+                    </p>    
+                </div> 
+            </div>
+           <dir-pagination-controls max-size="5" boundary-links="true" pagination-id="blockPagination">
+           </dir-pagination-controls>
+        </div>
+    </div>
+</div>

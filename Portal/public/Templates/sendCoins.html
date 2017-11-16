@@ -1,0 +1,70 @@
+<div class="is-auth" style="background-image: none;height: 68vh;">
+  <div class="login-block" style="width: 355px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+
+                <div class="dash-window">
+
+                    <h4><i class="fa fa-user-circle" aria-hidden="true" ng-if="false"></i> Send Coins</h4>
+                    <form id="frmSendCoin">
+                        <div class="form-group">
+                          <span style="color:red;">*</span><label for="username">User:</label>
+                            <input  list="allUserDetailList" type="text" class="form-control" 
+                                   name="username" autocomplete="off"
+                                   ng-model="frmSendCoin.toUserName" ng-keyup="suggetionList()" />
+                           
+                            <datalist id="allUserDetailList">
+								<option ng-repeat="item in results" value="{{item}}"></option>
+				           </datalist>
+                        </div> 
+                        <div class="form-group">
+                            <span style="color:red;">*</span> <label for="coin">Coins:</label>
+                            <input type="number" class="form-control" name="coin"  ng-model="frmSendCoin.coin"/>
+                        </div>
+                          <div class="form-group">
+                            <label for="coin">Available Coins :</label>
+                            <span>{{availableCoins}}</span>
+                        </div>
+                         <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="sendCoin(frmSendCoin)">
+                            Send</button>
+
+                          <p ng-if="isSendCoinError" class="pt-lg text-center" style="color: green;">
+                              {{errorSendCoinMsg}} </p>
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!--<div class="is-auth" style="background-image: none;height: 68vh;">
+    <div class="login-block">
+        <div class="form-heading">
+            <h1>Send Coin</h1>
+        </div>
+       <div class="dash-window">
+
+                <h4><i class="fa fa-user-circle" aria-hidden="true"></i> Send Coins</h4>
+                <form id="frmSendCoin">
+                    <div class="form-group">
+                      <span style="color:red;">*</span><label for="username">User:</label>
+                        <input type="text" class="form-control" name="username" ng-model="frmSendCoin.toUserName"/>
+                    </div> 
+                    <div class="form-group">
+                        <span style="color:red;">*</span> <label for="coin">Coins:</label>
+                        <input type="number" class="form-control" name="coin"  ng-model="frmSendCoin.coin"/>
+                    </div>
+                      <div class="form-group">
+                        <label for="coin">Available Coins :</label>
+                        <span>{{availableCoins}}</span>
+                    </div>
+                     <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="sendCoin(frmSendCoin)">
+                        Send</button>
+                    
+                      <p ng-if="isSendCoinError" class="pt-lg text-center text-danger"> {{errorSendCoinMsg}} </p>
+                </form>
+            </div>
+    </div>
+</div>-->

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">      
+            <div class="row">  
+                <div class="col-md-12">
+                    <div class="update-head-wrap">
+                        <h3>Transactions</h3>
+                    </div>
+					
+					 <div class="transfer-coin-row" pagination-id="transactionPagination" 
+                          dir-paginate="item in transactionDtl | itemsPerPage: maxVisibleConnectionCount">
+                        <div class="ppl-pic-wrap">
+                            <img class="img-responsive" src="/assets/img/grey/UserProfile.png" alt="">
+							<figcaption>{{::item.fromUser}}</figcaption>
+                        </div>
+                       
+                        <div class="transaction-stats-wrap">
+                            <h3 class="number-of-coin"> {{::item.amount}} coins </h3>
+                             <p class="transact-arrow"><img class="img-responsive" src="/assets/img/arrow.png" /></p>
+                            <p class="time-stap" am-time-ago="item.updatedAt"><span class="fa fa-clock-o"> </span> </p>    
+                        </div>
+                         
+                        <div class="ppl-pic-wrap">
+                            <img class="img-responsive" src="/assets/img/grey/UserProfile.png" alt="">
+							<figcaption>{{::item.toUser}}</figcaption>
+                        </div>
+                    </div>
+                   <!--  <div ng-if="userConnectionDetails.Connections && userConnectionDetails.Connections.length > maxVisibleConnectionCount" class="row rnm" style="height: 50px;text-align: center;">-->
+                    <dir-pagination-controls max-size="5" boundary-links="true" pagination-id="transactionPagination">
+                    </dir-pagination-controls>
+           <!-- </div> -->
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

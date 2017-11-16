@@ -1,0 +1,43 @@
+<div class="container">
+<div class="row">
+
+	<div class="col-md-6">
+		<div class="modal-header">
+		<h4 class="modal-title ng-binding">
+			It's time to mine a block! 
+			<a title="Close"><i ng-click="closePuzzle()" class="glyphicon glyphicon-remove icon-arrow-right pull-right"></i></a> 
+    </h4>
+		</div>
+		<div class="modal-body" id="modal-body-{{name}}">
+			<h5> Whats the result of the below mathematical expression ?</h5><br>
+			<div class="modal-question" >
+					<div class="row" ng-repeat="option in options track by $index" > 
+
+                        <div class="col-xs-5" style="text-align: right;">
+							<label for="plus" ng-if="$index > 0"> +</label>
+                        </div>
+                        <div class="col-xs-6">
+							<label for="secondNumber">{{option}}</label>
+                        </div>
+                    </div>
+
+				<div class="row">	
+					<div class="col-xs-6 col-xs-offset-3">
+						<input type="text" class="form-control" ng-model="answer" valid-number>{{resultSeconds}} Sec
+						<input type="hidden" ng-model="questionID">
+						<input type="hidden" ng-model="loggedInUser">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-success" type="button" ng-click="submitPuzzle()" ng-disabled="answer =='' ">Submit</button>
+			<!--button class="btn btn-warning" type="button" ng-click="closePuzzle()">Cancel</button-->
+			
+		</div>
+	</div>
+
+</div>
+</div>
+
+
